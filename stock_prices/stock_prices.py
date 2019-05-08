@@ -7,11 +7,24 @@ def find_max_profit(prices):
   max_profit_so_far = 0
   # For this function, I'm going to run nested for loops that
   # will check the difference of n and n-1
-  for i in range(len(prices)):
-    if prices[i] < prices[]
-    for j in range(i):
-      if prices[i] > prices[j]:
-        current_min_price_so_far = prices[j]
+
+  # My first attempt was not successful. I figured out that I was
+  # over-complicating my loop - by running a single loop and checking
+  # the minimum price against each number that came before it, we can
+  # more effectively run the algorithm - Big O is O(n) for this function
+  for i in range(len(prices) - 1):
+    if i == 0:
+      current_min_price_so_far = prices[i]
+      continue
+    if prices[i] < current_min_price_so_far:
+      current_min_price_so_far = prices[i]
+
+    if prices[i] > current_min_price_so_far:
+      difference = prices[i] - current_min_price_so_far
+      if difference > max_profit_so_far:
+        max_profit_so_far = difference
+  
+  return max_profit_so_far
 
 
 
