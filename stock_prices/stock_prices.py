@@ -12,7 +12,7 @@ def find_max_profit(prices):
   # over-complicating my loop - by running a single loop and checking
   # the minimum price against each number that came before it, we can
   # more effectively run the algorithm - Big O is O(n) for this function
-  for i in range(len(prices) - 1):
+  for i in range(len(prices)):
     if i == 0:
       current_min_price_so_far = prices[i]
       continue
