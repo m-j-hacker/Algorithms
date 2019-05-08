@@ -3,7 +3,16 @@
 import argparse
 
 def find_max_profit(prices):
-  pass
+  current_min_price_so_far = 0
+  max_profit_so_far = 0
+  # For this function, I'm going to run nested for loops that
+  # will check the difference of n and n-1
+  for i in range(len(prices)):
+    if prices[i] < prices[]
+    for j in range(i):
+      if prices[i] > prices[j]:
+        current_min_price_so_far = prices[j]
+
 
 
 if __name__ == '__main__':
