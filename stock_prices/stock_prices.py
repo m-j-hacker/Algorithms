@@ -18,8 +18,9 @@ def find_max_profit(prices):
       continue
     if prices[i] < current_min_price_so_far:
       current_min_price_so_far = prices[i]
+      min_index = i
 
-    if prices[i] > current_min_price_so_far:
+    if prices[i] > current_min_price_so_far and min_index < i:
       difference = prices[i] - current_min_price_so_far
       if difference > max_profit_so_far:
         max_profit_so_far = difference
