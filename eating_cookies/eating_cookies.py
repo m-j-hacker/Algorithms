@@ -22,6 +22,6 @@ if __name__ == "__main__":
 
     # Notes
     # The problem boils down to this - how many different times can
-    # the given number be reduced by 1, 2, and 3?
+    # the given number be reduced by 1, 2, and 3, in multiple combinations?
     # 
     # Recursion holds the answer 
